@@ -1,1 +1,34 @@
-<p>hunters works!</p>
+<h1>Hunters Module</h1>
+
+<form>
+    <input type="text" placeholder="Hunter Name" [(ngModel)]="hunter.name" name="name">
+    <br><br>
+    <input type="number" placeholder="Rank" [(ngModel)]="hunter.rank" name="rank">
+    <br><br>
+    <input type="text" placeholder="Weapon" [(ngModel)]="hunter.weapon" name="weapon">
+    <br><br>
+    <input type="email" placeholder="Email" [(ngModel)]="hunter.email" name="email">
+
+    <button 
+        type="button"
+        (click)="selectedId ? updateHunter(): addHunter()">
+        {{ selectedId ? 'Update Hunter' : 'Add Hunter' }}
+    </button>
+
+</form>
+
+<hr>
+
+<h2>Registered Hunters</h2>
+
+<div *ngFor="let hunter of hunters">
+    <h3>{{ hunter.name }}</h3>
+    <p>Rank: {{ hunter.rank }}</p>
+    <p>Weapon: {{ hunter.weapon }}</p>
+    <p>Email: {{ hunter.email }}</p>
+
+    <button (click)="editHunter(hunter)">Edit</button>
+    <button (click)="deleteHunter(hunter._id)">Delete</button>
+
+    <hr>
+</div>
