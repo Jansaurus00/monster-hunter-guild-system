@@ -1,3 +1,47 @@
 .dashboard {
-    min-height: ;
+    min-height: 100vh;
+    padding: 60px;
+    text-align: center;
+    background-image: url('/images/home/hoarfrostreach.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dashboard h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.dashboard h2 {
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+
+.welcome {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.card {
+    background: rgba(0, 0, 0, .7);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h1{
+    font-size: 60px;
+    color: #d4af37;
 }
