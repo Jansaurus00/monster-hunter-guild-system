@@ -7,8 +7,8 @@ const hunterRoutes = require('./routes/hunterRoutes')
 const app = express();
 
 app.use(cors());
-app.use(express());
-app.use('./api/hunters', hunterRoutes)
+app.use(express.json());
+app.use('/api/hunters', hunterRoutes)
 
 mongoose.connect('mongodb+srv://jan:mAXIbSBZLRVGvUQd@monster-hunter-guild-sy.9ijhkz3.mongodb.net/?appName=monster-hunter-guild-system')
 .then(() => console.log('MongoDB Connected'))
