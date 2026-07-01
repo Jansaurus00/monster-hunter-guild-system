@@ -1,1 +1,22 @@
-<p>weapons works!</p>
+<div class ="weapons-page">
+    <div class="overlay">
+        <h1>Weapon Encyclopedia</h1>
+
+        <p class="subtitle">
+            Discover the fourteen weapon types used by hunters throughout the Guild.
+        </p>
+
+        <div class="weapon-grid">
+            <div class="weapon-card" *ngFor="let weapon of weapons">
+            <img [src]="weapon.image" [alt]="weapon.name">
+
+            <h2>{{ weapon.name }}</h2>
+
+            <p><strong>Difficulty: </strong>{{ weapon.difficulty }}</p>
+            <p><strong>Role: </strong>{{ weapon.role }}</p>
+            <p>{{ weapon.description }}</p>
+
+            </div>
+        </div>
+    </div>
+</div>
