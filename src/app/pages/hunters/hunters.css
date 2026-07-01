@@ -1,0 +1,113 @@
+.hunters-page{
+    min-height:100vh;
+    background-image:url('/images/hunters/gatheringhub.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    }
+    
+    .overlay{
+    background:rgba(0,0,0,.7);
+    min-height:100vh;
+    padding:120px 40px;
+    }
+    
+    h1{
+    text-align:center;
+    color:#d4af37;
+    font-size:48px;
+    }
+    
+    .subtitle{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    }
+    
+    .form-card{
+    max-width:500px;
+    margin:auto;
+    background:#202020;
+    padding:30px;
+    border-radius:15px;
+    border:2px solid #d4af37;
+    }
+    
+    .form-card h2{
+    color:#d4af37;
+    text-align:center;
+    }
+    
+    .form-card input{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    box-sizing:border-box;
+    }
+    
+    .form-card button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#c68b1f;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    }
+    
+    .form-card button:hover{
+    background:#e0a72d;
+    }
+    
+    .registry-title{
+    text-align:center;
+    color:#d4af37;
+    margin-top:50px;
+    }
+    
+    .hunter-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-top:30px;
+    }
+    
+    .hunter-card{
+    background:#252525;
+    color:white;
+    border:2px solid #d4af37;
+    border-radius:15px;
+    padding:20px;
+    }
+    
+    .hunter-card h3{
+    color:#d4af37;
+    }
+    
+    .buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    }
+    
+    .edit-btn{
+    background:#1976d2;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    }
+    
+    .delete-btn{
+    background:#c62828;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    }

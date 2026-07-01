@@ -1,34 +1,34 @@
-<h1>Hunters Module</h1>
+<div class="hunters-page">
+    <div class="overlay">
+        <h1>Hunter Registry</h1>
+        <p class="subtitle">
+            Register and manage elite hunters of the Seliana Guild
+        </p>
 
-<form>
-    <input type="text" placeholder="Hunter Name" [(ngModel)]="hunter.name" name="name">
-    <br><br>
-    <input type="number" placeholder="Rank" [(ngModel)]="hunter.rank" name="rank">
-    <br><br>
-    <input type="text" placeholder="Weapon" [(ngModel)]="hunter.weapon" name="weapon">
-    <br><br>
-    <input type="email" placeholder="Email" [(ngModel)]="hunter.email" name="email">
+        <div class="form-card">
+            <h2>Hunter Registration</h2>
+            <form>
+                <input type="text" placeholder="Hunter Name" [(ngModel)]="hunter.name" name="name">
+                <input type="number" placeholder="Hunter Rank" [(ngModel)]="hunter.rank" name="rank">
+                <input type="text" placeholder="Main Weapon" [(ngModel)]="hunter.weapon" name="weapon">
+                <input type="text" placeholder="Guild Email" [(ngModel)]="hunter.email" name="email">
+                <button type="button" (click)="selectedId ? updateHunter() : addHunter()"> {{ selectedId ? 'Update Hunter' : 'Register Hunter'}} </button>
+            </form>
+        </div>
 
-    <button 
-        type="button"
-        (click)="selectedId ? updateHunter(): addHunter()">
-        {{ selectedId ? 'Update Hunter' : 'Add Hunter' }}
-    </button>
+        <h2 class="registry-title">Registered Hunter</h2>
+        <div class="hunter-grid">
+            <div class="hunter-card" *ngFor="let hunter of hunters">
+                <h3>{{ hunter.name }}</h3>
+                <p><strong>Rank: </strong>{{ hunter.rank }}</p>
+                <p><strong>Weapon: </strong>{{ hunter.weapon }}</p>
+                <p><strong>Email: </strong>{{ hunter.email }}</p>
 
-</form>
-
-<hr>
-
-<h2>Registered Hunters</h2>
-
-<div *ngFor="let hunter of hunters">
-    <h3>{{ hunter.name }}</h3>
-    <p>Rank: {{ hunter.rank }}</p>
-    <p>Weapon: {{ hunter.weapon }}</p>
-    <p>Email: {{ hunter.email }}</p>
-
-    <button (click)="editHunter(hunter)">Edit</button>
-    <button (click)="deleteHunter(hunter._id)">Delete</button>
-
-    <hr>
+                <div class="buttons">
+                    <button class="edit-btn" (click)="editHunter(hunter)">Edit</button>
+                    <button class="delete-btn" (click)="deleteHunter(hunter._id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
